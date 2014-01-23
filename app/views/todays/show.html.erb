@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @today.date %>
+</p>
+
+<p>
+  <strong>Reason to celebrate:</strong>
+  <%= @today.Reason_to_celebrate %>
+</p>
+
+<%= link_to 'Edit', edit_today_path(@today) %> |
+<%= link_to 'Back', todays_path %>

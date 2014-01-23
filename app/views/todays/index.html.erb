@@ -1,0 +1,29 @@
+<h1>Reasons to celebrate</h1>
+
+<table>
+  <thead>
+    <tr>
+     <!--<th>Date</th>-->
+      <!--<th>Reason to celebrate</th>-->
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @todays.each do |today| %>
+      <tr>
+        <td><%= today.date %></td>
+        <td><%= today.Reason_to_celebrate %></td>
+        <td><%= link_to 'Show', today %></td>
+        <td><%= link_to 'Edit', edit_today_path(today) %></td>
+        <td><%= link_to 'Destroy', today, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Today', new_today_path %>
